@@ -23,9 +23,7 @@ in social media discussions about study abroad experiences and academic life.
 
 The findings will provide insights into bilingual communication patterns 
 particularly in contexts such as the **U.S.**, **Canada**, and other foreign 
-countries. The analysis will also contribute to improving multilingual 
-Natural Language Processing (NLP) models, 
-especially those processing bilingual social media content.
+countries. 
 
 ## Objective
 
