@@ -1,0 +1,16 @@
+# Put the Mac OS X .DS_Store files in the gitignore
+.DS_Store
+# Put the Mac OS X ._* files in the gitignore
+._*
+
+# Put the private folder in the gitignore
+private/
+
+# Put the node_modules folder in the gitignore
+node_modules/
+
+# Put the .env file in the gitignore
+.env
+
+# Put the .env.local file in the gitignore
+.env.local
