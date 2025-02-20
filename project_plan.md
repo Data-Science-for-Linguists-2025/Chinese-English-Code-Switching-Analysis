@@ -1,87 +1,74 @@
-# Project Plan: Code-Switching Analysis 
+## Project Plan:  Chinese-English Code-Switching Analysis
 
-## Project Overview
+### Project Overview
 
-The goal of this project is to analyze code-switching between Chinese and 
-English in social media posts made by Chinese students. The analysis will 
-focus on detecting code-switching, measuring its frequency, 
-and understanding how contexts/topics
-influences the use of code-switching.
+This project investigates Chinese-English code-switching in posts from **users of a Chinese language-focused Stack Exchange site**. Using data obtained through the Stack Exchange API, the study aims to detect and analyze the frequency of code-switching, and explore how context or topic influences the occurrence of code-switching in a real-world, bilingual community. The findings will contribute to understanding multilingual communication dynamics in online platforms, particularly among bilingual users.
 
-Keywords: **bilingual students**, **code-switching**, 
-**Chinese-English**, **multilingual communication**
+**Keywords**: **Chinese-English bilinguals**, **code-switching**, **Stack Exchange**, **bilingual communication**, **online communities**
 
-## Research Questions
+### Research Questions
 
-1. **How frequently does code-switching occur in social media posts by Chinese students?**
-2. **Is there a significant difference in code-switching frequency in posts across different domains?**
+1. **How frequently does code-switching occur in social media posts on a Chinese-language Stack Exchange site?**
+2. **Is there a significant difference in code-switching frequency across different discourse domains, such as technical versus non-technical topics?**
 
-## Why is this Important?
+### Importance of the Study
 
-### 1. **Cultural Identity & Social Dynamics**
-   This project sheds light on how students express 
-   their **multilingual identity** and navigate their cultural 
-   spaces by switching languages. Understanding these patterns can help 
-   us see how students use code-switching for **peer bonding**, 
-   **cultural adaptation**, and **identity expression**, particularly in a 
-   foreign context like the **U.S.** or **Canada**.
+#### **Cultural Identity & Social Dynamics**  
+This project sheds light on how **bilingual individuals** use code-switching to express **multilingual identity** within an online community. Understanding these patterns will reveal how users navigate **peer interactions**, **cultural adaptation**, and **identity expression** in a global, digital space. It can also provide insights into how users balance linguistic boundaries in online technical discourse, particularly when switching between Chinese and English.
 
-### 2. **Educational Insights**
-   Understanding how students switch languages in different contexts 
-   can guide universities in providing **effective bilingual support** 
-   and creating more **inclusive academic environments** for multilingual 
-   students, especially in **foreign countries**. 
-   This includes supporting **international students** from 
-   countries like **China** studying abroad in the **U.S.** or **Canada**.
+#### **Educational Insights**  
+The findings of this study will inform educators and platform developers about the language needs of **bilingual communities** on **technical forums** like Stack Exchange. This can lead to better support for **international users**, particularly those transitioning between languages in academic and professional settings. It will also inform the design of more inclusive communication tools for multilingual users in global digital environments.
 
-## Steps and Timeline
+### Data Collection & Methodology
 
-### **Step 1: Data Collection & Preprocessing (3 weeks)**
+**Data Source**: Data will be collected using the **Stack Exchange API**, specifically querying posts from a Chinese-language focused Stack Exchange site. The dataset will include questions and answers from users who engage in bilingual Chinese-English discourse.
 
-- **Task**: Gather social media posts made by Chinese students 
-and preprocess the data.
+**Methodology**:  
+1. **Code-Switching Detection**: A **rule-based system** will be implemented to identify instances of code-switching between Chinese and English in the posts. Tools like **language detection libraries** (`langdetect`, `langid`) will be used to flag transitions between the two languages.
+2. **Contextual Analysis**: The posts will be classified into various domains (technical, personal, etc.) using **topic modeling** to assess how the context affects the frequency and nature of code-switching.
+3. **Linguistic Feature Analysis**: In addition to frequency analysis, the study will explore the **linguistic features** of the code-switching instances, such as sentence structure, word choice, and the interplay between the two languages.
+
+### Steps and Timeline
+
+#### **Step 1: Data Collection & Preprocessing (2 weeks)**  
+- **Task**: Collect and preprocess data from the Stack Exchange API.
 - **Details**:
-  - Collect posts from online forums. 
-    - 1. [1point3acres Forum - Forum 27](https://www.1point3acres.com/bbs/forum-27-1.html)
-    - 2. [1point3acres Forum - Forum 29](https://www.1point3acres.com/bbs/forum-29-1.html)
-  - Clean the data (remove irrelevant characters, emojis, URLs).
-  - Apply **language detection** to identify the Chinese and English parts of the text.
+  - Query the Stack Exchange API to collect posts from the Chinese-language site.
+  - Clean the data by removing irrelevant characters, URLs, or non-linguistic elements.
+  - Use **language detection tools** to segment the posts into Chinese and English portions.
 
-### **Step 2: Code-Switching Detection & Frequency Analysis (3 weeks)**
-
-- **Task**: Detect code-switching instances and analyze the frequency.
+#### **Step 2: Code-Switching Detection & Frequency Analysis (3 weeks)**  
+- **Task**: Detect instances of code-switching and analyze its frequency.
 - **Details**:
-  - Implement a **rule-based detection system** to flag code-switching 
-  by detecting language shifts between Chinese and English within each post.
-  - Use **language detection tools** (e.g., `langdetect`, `langid`) 
-  on a sentence level or sliding window approach to identify code-switching.
-  - Calculate the **frequency** of code-switching in the dataset 
-  and identify patterns in the data.
+  - Implement a **rule-based detection system** to identify code-switching between Chinese and English.
+  - Calculate the **frequency** of code-switching in posts.
+  - Analyze the relationship between code-switching frequency and different domains (technical vs. non-technical).
 
-### **Step 3: Domain Classification & Reporting (4 weeks)**
-
-- **Task**: Classify posts into categories based on their topics and prepare a final report.
+#### **Step 3: Linguistic Feature Analysis & Domain Classification (2 weeks)**  
+- **Task**: Classify posts into domains and analyze linguistic features associated with code-switching.
 - **Details**:
-  - Classify posts into different discourse domains through topic modeling.
-  - **Analyze** the frequency of code-switching across different domains.
-  - **Prepare a final report** summarizing the findings, methodology, and insights.
+  - Use **topic modeling** to classify posts by domain (e.g., technical, academic, social).
+  - Explore the **linguistic features** of code-switching, such as sentence structure, vocabulary choices, and the placement of language switches.
 
-## Deliverables
+#### **Step 4: Reporting & Final Analysis (1 week)**  
+- **Task**: Summarize findings and prepare a final report.
+- **Details**:
+  - Synthesize insights from frequency analysis, domain classification, and linguistic feature exploration.
+  - Prepare a comprehensive report outlining the methodology, results, and implications for bilingual communication in online forums.
 
-1. **Code-Switching Detection Model**: A simple model to detect code-switching 
-between Chinese and English in social media posts.
-2. **Frequency Analysis Report**: A report showing how often code-switching 
-occurs and its relationship with different discourse domains (personal vs. academic).
-3. **Final Report**: A detailed summary of the project, including insights 
-into code-switching frequency, context analysis, 
-and implications for multilingual communication.
+### Deliverables
 
-## Timeline
+1. **Code-Switching Detection Model**: A model that detects instances of Chinese-English code-switching in user posts.
+2. **Frequency Analysis Report**: A detailed analysis of how often code-switching occurs and its relationship to different domains (technical vs. non-technical).
+3. **Linguistic Feature Analysis**: Insights into the linguistic features and patterns associated with code-switching in this bilingual community.
+4. **Final Report**: A comprehensive summary of the project, including findings, analysis, and implications for multilingual communication in online environments.
 
-| **Phase**                     | **Task**                                                      | **Duration**       |
-|-------------------------------|---------------------------------------------------------------|--------------------|
-| **Step 1**: Data Collection    | Collect and preprocess the data                                | 3 weeks            |
-| **Step 2**: Code-Switching Detection | Detect code-switching and perform frequency analysis        | 3 weeks            |
-| **Step 3**: Domain Classification & Reporting | Classify posts, analyze frequency, and prepare the final report | 4 weeks            |
-| **Total Duration**             |                                                               | **10 weeks**        |
+### Timeline
 
+| **Phase**                     | **Task**                                                        | **Duration**       |
+|-------------------------------|-----------------------------------------------------------------|--------------------|
+| **Step 1**: Data Collection & Preprocessing | Collect and preprocess data using the Stack Exchange API       | 2 weeks            |
+| **Step 2**: Code-Switching Detection & Frequency Analysis | Detect code-switching and analyze frequency                    | 3 weeks            |
+| **Step 3**: Linguistic Feature Analysis & Domain Classification | Classify posts, analyze linguistic features, and domain impact | 2 weeks            |
+| **Step 4**: Reporting & Final Analysis | Compile final report and summarize insights                    | 1 week             |
+| **Total Duration**             |                                                                 | **8 weeks**        |
