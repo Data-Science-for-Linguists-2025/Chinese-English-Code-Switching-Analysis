@@ -21,7 +21,7 @@ The data for this project will be collected using the **Stack Exchange API**, sp
 
 Data will be scraped from the **Stack Exchange API**:
 - **Site**: Chinese-language focused Stack Exchange site
-- **Data**: Posts (questions and answers) from bilingual users
+- **Data**: Posts from bilingual users
 
 The dataset will include bilingual posts where users switch between Chinese and English, providing a rich source for analyzing code-switching patterns in a technical context.
 
