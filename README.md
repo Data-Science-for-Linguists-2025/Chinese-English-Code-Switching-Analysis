@@ -13,9 +13,8 @@ The data for this project will be collected using the **Stack Exchange API**, sp
 ## Objectives
 
 - **Detect Code-Switching**: Identify instances of code-switching between Chinese and English in Stack Exchange posts.
-- **Frequency Analysis**: Measure the frequency of code-switching and analyze its patterns across different domains (e.g., technical vs. non-technical topics).
 - **Contextual Influence**: Investigate how context and discourse domain influence the use of code-switching in posts.
-- **Linguistic Feature Analysis**: Explore the linguistic features of code-switching, such as sentence structure, word choice, and language transitions.
+- **Frequency Analysis**: Measure the frequency of code-switching and analyze its patterns across different domains (e.g., technical vs. non-technical topics).
 
 ## Data Collection
 
