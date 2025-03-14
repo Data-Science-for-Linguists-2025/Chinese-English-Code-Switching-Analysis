@@ -39,14 +39,13 @@ The findings of this study will inform educators and platform developers about t
 - **Task**: Detect instances of code-switching and analyze its frequency.
 - **Details**:
   - Implement a **rule-based detection system** to identify code-switching between Chinese and English.
-  - Calculate the **frequency** of code-switching in posts.
-  - Analyze the relationship between code-switching frequency and different domains (technical vs. non-technical).
 
 #### **Step 3: Domain Classification (2 weeks)**  
 - **Task**: Classify posts into domains and analyze linguistic features associated with code-switching.
 - **Details**:
   - Use **topic modeling** to classify posts by domain (e.g., technical, academic, social).
-  - Explore the **linguistic features** of code-switching, such as sentence structure, vocabulary choices, and the placement of language switches.
+  - Calculate the **frequency** of code-switching in posts.
+  - Analyze the relationship between code-switching frequency and different domains (technical vs. non-technical).
 
 #### **Step 4: Reporting & Final Analysis (1 week)**  
 - **Task**: Summarize findings and prepare a final report.
@@ -66,6 +65,6 @@ The findings of this study will inform educators and platform developers about t
 |-------------------------------|-----------------------------------------------------------------|--------------------|
 | **Step 1**: Data Collection & Preprocessing | Collect and preprocess data using the Stack Exchange API       | 2 weeks            |
 | **Step 2**: Code-Switching Detection | Detect code-switching | 3 weeks            |
-| **Step 3**: Domain Classification | Classify posts and domain impact | 2 weeks            |
+| **Step 3**: Domain identification | Domain identification and calculate their impact on CS | 2 weeks            |
 | **Step 4**: Reporting & Final Analysis | Compile final report and summarize insights                    | 1 week             |
 | **Total Duration**             |                                                                 | **8 weeks**        |
