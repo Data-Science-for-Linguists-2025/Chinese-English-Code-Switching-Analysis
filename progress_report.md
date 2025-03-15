@@ -69,8 +69,10 @@ timeline, and others.
     - **Work4.3:** [progress_report.md](progress_report.md)
 
 ### Data Sharing: Partial Dataset Sharing
-- **Description**: Share a subset of the dataset, focusing on the first 1,000 
-records. As noted earlier, all data were gathered using Stack Exchange API. 
+- **Description**: Share a subset of the dataset 1,000 records. These records 
+were randomly selected (e.g., random sampling). For specific code, 
+see [1.2_process_data.ipynb](1.2_process_data.ipynb). 
+As noted earlier, all data were gathered using Stack Exchange API. 
 - **Justification**: Balances data sharing with privacy concerns while still 
 supporting open science and collaborative research. In other words, this data 
 sharing plan ensures privacy and data sensitivity while still aligning with 
