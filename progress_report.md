@@ -75,4 +75,4 @@ records. As noted earlier, all data were gathered using Stack Exchange API.
 supporting open science and collaborative research. In other words, this data 
 sharing plan ensures privacy and data sensitivity while still aligning with 
 the principles of open science.
-    - **Work:** [Data Samples](data_samples/stack_exchange_cleaned_sample.csv)
+    - **Work:** [Data Samples](data/stack_exchange_cleaned_sample.csv)
