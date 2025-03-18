@@ -14,7 +14,7 @@ The data for this project will be collected using the **Stack Exchange API**, sp
 
 - **Detect Code-Switching**: Identify instances of code-switching between Chinese and English in Stack Exchange posts.
 - **Contextual Influence**: Investigate how context and discourse domain influence the use of code-switching in posts.
-- **Frequency Analysis**: Measure the frequency of code-switching and analyze its patterns across different domains (e.g., technical vs. non-technical topics).
+- **Frequency Analysis**: Measure the frequency of code-switching and analyze its patterns across different domains/topics.
 
 ## Data Collection
 
