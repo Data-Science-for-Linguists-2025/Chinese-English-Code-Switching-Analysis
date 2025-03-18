@@ -54,19 +54,19 @@ In this second progress report, I have accomplished the following:
 - Used **regex** and **language detection libraries** (`langdetect`, `langid`) 
 to identify/detect if sentences are CS or not. Specific code is in the Jupyter 
 Notebook below. 
-    - **Work1:** [2.1_analyze_data.ipynb](2.1_analyze_data.ipynb)
+    - **Work2.1:** [2.1_analyze_data.ipynb](2.1_analyze_data.ipynb)
 - Used topics modeling methods (`KMeans`, `LDA`) to identify/cluster the topics. 
 Specific code is in the Jupyter Notebook below. 
-    - **Work2:** [2.1_analyze_data.ipynb](2.1_analyze_data.ipynb)
+    - **Work2.2:** [2.1_analyze_data.ipynb](2.1_analyze_data.ipynb)
 - Updated licensing file. Specific is in the file below. 
-    - **Work3:** [LICENSE.md](LICENSE.md)
+    - **Work2.3:** [LICENSE.md](LICENSE.md)
 - Revised the `1.2_process_data.ipynb`, `project_plan.md` and `README.md` files 
 to accordingly to make sure the project is doable. This began with objectives, 
 timeline, and others. 
-    - **Work4.3:** [1.2_process_data.ipynb](1.2_process_data.ipynb)
-    - **Work4.3:** [README.md](README.md)
-    - **Work4.3:** [project_plan.md](project_plan.md)
-    - **Work4.3:** [progress_report.md](progress_report.md)
+    - **Work2.4:** [1.2_process_data.ipynb](1.2_process_data.ipynb)
+    - **Work2.5:** [README.md](README.md)
+    - **Work2.6:** [project_plan.md](project_plan.md)
+    - **Work2.7:** [progress_report.md](progress_report.md)
 
 ### Data Sharing: Partial Dataset Sharing
 - **Description**: Share a subset of the dataset 1,000 records. These records 
@@ -77,4 +77,4 @@ As noted earlier, all data were gathered using Stack Exchange API.
 supporting open science and collaborative research. In other words, this data 
 sharing plan ensures privacy and data sensitivity while still aligning with 
 the principles of open science.
-    - **Work:** [Data Samples](data/stack_exchange_cleaned_sample.csv)
+    - **Work2.8:** [Data Samples](data/stack_exchange_cleaned_sample.csv)
