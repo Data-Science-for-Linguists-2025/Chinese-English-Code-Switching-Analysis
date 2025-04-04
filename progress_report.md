@@ -9,6 +9,9 @@
 2. [2nd Proress Report](#2nd-progress-report)
     - [Summary of Accomplishments 2](#summary-of-accomplishments-2)
     - [Data Sharing](#data-sharing-partial-dataset-sharing)
+3. [3rd Proress Report](#3rd-progress-report)
+    - [Summary of Accomplishments 3](#summary-of-accomplishments-3)
+    - [Data](#data)
 
 ## 1st Progress Report
 
@@ -78,3 +81,40 @@ supporting open science and collaborative research. In other words, this data
 sharing plan ensures privacy and data sensitivity while still aligning with 
 the principles of open science.
     - **Work2.8:** [Data Samples](data/stack_exchange_cleaned_sample.csv)
+
+
+## 3rd Progress Report
+
+### Summary of Accomplishments 3
+In this second progress report, I have accomplished the following:
+- Used `stanza` leveraging both its Chinese and English language models to tokenize the text data to have information on word count, 
+sentence word, mean word count per sentence. 
+    - **Work3.1:** [2.2_analyze_data.ipynb](2.2_analyze_data.ipynb)
+    - 12,041 records/rows withou null values
+    - A total word tokens of 152573
+    - A total sentence counts of 13664
+    - A mean word count of 10.54 per sentence
+- Get the frequency counts across all domains:
+    - **Work3.2:** [2.2_analyze_data.ipynb](2.2_analyze_data.ipynb)
+        - Topic VS cs frequency count
+        - 1) characters, synonyms, topolects            2437
+        - 2) word choice, phrase, sentence structure    2033
+        - 3) idioms                                     1012
+        - 4) Mandarin, character                         840
+        - 5) grammar, meaning                            652
+        - 6) difference: writing, speech                 483
+- Conduct statistical test on the frequencies across six domains 
+    - **Work3.3:** [2.2_analyze_data.ipynb](2.2_analyze_data.ipynb)
+    - stats, p_value: 5.0, 0.415
+    - The groups are not statistically different
+- Conduct POS shift analysis
+    - **Work3.4:** [2.2_analyze_data.ipynb](2.2_analyze_data.ipynb)
+    - no_shift    139302
+    - shift        13271
+
+### Data 
+- The data file is in the final shape. No changes are made in the shared data.
+- Additional data files were created for linguistic analysis and saved to avoid 
+    repetive processing:
+    - stack_exchange pos data
+    - stack_exchange tokenized data
