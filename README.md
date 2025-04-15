@@ -1,8 +1,8 @@
 # Chinese-English Code-Switching Analysis of Stack Exchange Posts
 
 **Author:** Qidu Fu  
-**Email:** [email](qiduf@andrew.cmu.edu)  
-**Date:** April 20, 2025
+**Email:** qiduf@andrew.cmu.edu
+**Date:** April 15, 2025
 
 ## Summary
 
