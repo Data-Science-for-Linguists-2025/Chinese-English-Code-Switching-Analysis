@@ -1,18 +1,18 @@
-# Chinese-English Code-Switching Analysis of Stack Exchange Posts
+# Chinese-English Code-Switching Analysis: The Case of Stack Exchange Posts
 
 **Author:** Qidu Fu  
-**Email:** qiduf@andrew.cmu.edu
+**Email:** qiduf@andrew.cmu.edu  
 **Date:** April 15, 2025
 
 ## Summary
 
 This project analyzes Chinese-English code-switching in posts from a Chinese-language Stack Exchange site. The aim is to detect instances of code-switching, measure its frequency, and explore how different domains influence the occurrence of code-switching in this bilingual online community. The findings provide insights into multilingual communication patterns, particularly among bilingual users in online communities.
 
-**Keywords:** Chinese-English bilinguals, code-switching, Stack Exchange, bilingual communication, online communities
+**Keywords:** Chinese-English , code-switching, Stack Exchange, multilingual communication, online communities
 
 ## Data
 
-The data for this project is collected using the **Stack Exchange API**, specifically querying posts from a Chinese-language focused Stack Exchange site. This dataset includes question posts from users who engage in bilingual Chinese-English discourse, providing a real-world view of code-switching in online forums. 1,000 randomly selected records of the data sourced from the API were provided in this [stack_exchange_cleaned_sample.csv](data/stack_exchange_cleaned_sample.csv) in the [data](#data) directory. 
+The data for this project is collected using the **Stack Exchange API**, specifically querying posts from a Chinese-language focused Stack Exchange site. This dataset includes question posts from users who engage in bilingual Chinese-English discourse, providing a real-world view of code-switching in online forums. 1,000 randomly selected records of the data sourced from the API were provided in this [stack_exchange_cleaned_sample.csv](data/stack_exchange_cleaned_sample.csv) in the data directory. 
 
 - **Link:** [Stack Exchange API](https://api.stackexchange.com/)
 - **Attribution:** Stack Exchange
@@ -21,15 +21,15 @@ The data for this project is collected using the **Stack Exchange API**, specifi
 
 - **[final_report.md](#final_report.md)**: the comprehensive report of the project 
 - [notebooks](notebooks/): The process and outcome of the project
-    - [github](notebooks/0_collect_data.ipynb0_data_collection.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/0_collect_data.ipynb): experiment for scraping data from a website (This is not used in the project.)
-    - [github](notebooks/1.1_collect_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/1.1_collect_data.ipynb): data collection from using the API
-    - [github](notebooks/1.2_process_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/1.2_process_data.ipynb): data cleaning
-    - [github](notebooks/2.1_analyze_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/2.1_analyze_data.ipynb): modeling - code-switching detection and topic modeling
-    - [github](notebooks/2.2_analyze_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/2.2_analyze_data.ipynb): linguistic analysis - tokenization and tests
-- [images](#images/): directory for images generated in this project
-- [Chinese_English_CS_presentation.pdf](#Chinese_English_CS_presentation.pdf): the slide presentation of the project
-- [progress_report.md](#progress_Report.md): the detailed progress made through the project
-- [project_plan.md](#project_plan): the original plan developed at the beginning of the project
+    - 0_collect_data.ipynb [github](notebooks/0_collect_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/0_collect_data.ipynb): experiment for scraping data from a website (This is not used in the project.)
+    - 1.1_collect_data.ipynb [github](notebooks/1.1_collect_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/1.1_collect_data.ipynb): data collection from using the API
+    - 1.2_process_data.ipynb [github](notebooks/1.2_process_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/1.2_process_data.ipynb): data cleaning
+    - 2.1_analyze_data.ipynb [github](notebooks/2.1_analyze_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/2.1_analyze_data.ipynb): modeling - code-switching detection and topic modeling
+    - 2.2_analyze_data.ipynb [github](notebooks/2.2_analyze_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/2.2_analyze_data.ipynb): linguistic analysis - tokenization and tests
+- [images](#./images/): directory for images generated in this project
+- [Chinese_English_CS_presentation.pdf](#./Chinese_English_CS_presentation.pdf): the slide presentation of the project
+- [progress_report.md](#./progress_Report.md): the detailed progress made through the project
+- [project_plan.md](#./project_plan): the original plan developed at the beginning of the project
 
 ## References
 - Bassiouney, R. (2020). Arabic sociolinguistics: Topics in diglossia, gender, identity, and politics. Georgetown University Press.
