@@ -27,9 +27,9 @@ The data for this project is collected using the **Stack Exchange API**, specifi
     - 2.1_analyze_data.ipynb [github](notebooks/2.1_analyze_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/2.1_analyze_data.ipynb): modeling - code-switching detection and topic modeling
     - 2.2_analyze_data.ipynb [github](notebooks/2.2_analyze_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/2.2_analyze_data.ipynb): linguistic analysis - tokenization and tests
 - [images](#./images/): directory for images generated in this project
-- [Chinese_English_CS_presentation.pdf](#./Chinese_English_CS_presentation.pdf): the slide presentation of the project
-- [progress_report.md](#./progress_Report.md): the detailed progress made through the project
-- [project_plan.md](#./project_plan): the original plan developed at the beginning of the project
+- [Chinese_English_CS_presentation.pdf](Chinese_English_CS_presentation.pdf): the slide presentation of the project
+- [progress_report.md](progress_Report.md): the detailed progress made through the project
+- [project_plan.md](project_plan): the original plan developed at the beginning of the project
 
 ## References
 - Bassiouney, R. (2020). Arabic sociolinguistics: Topics in diglossia, gender, identity, and politics. Georgetown University Press.
