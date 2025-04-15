@@ -21,11 +21,11 @@ The data for this project is collected using the **Stack Exchange API**, specifi
 
 - **[final_report.md](#final_report.md)**: the comprehensive report of the project 
 - [notebooks](notebooks/): The process and outcome of the project
-    - [github](notebooks/0_collect_data.ipynb0_data_collection.ipynb) | nbviewer: experiment for scraping data from a website (This is not used in the project.)
-    - [github](notebooks/1.1_collect_data.ipynb) | nbviewer: data collection from using the API
-    - [github](notebooks/1.2_process_data.ipynb) | nbviewer: data cleaning
-    - [github](notebooks/2.1_analyze_data.ipynb) | nbviewer: modeling - code-switching detection and topic modeling
-    - [github](notebooks/2.2_analyze_data.ipynb) | nbviewer: linguistic analysis - tokenization and tests
+    - [github](notebooks/0_collect_data.ipynb0_data_collection.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/0_collect_data.ipynb): experiment for scraping data from a website (This is not used in the project.)
+    - [github](notebooks/1.1_collect_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/1.1_collect_data.ipynb): data collection from using the API
+    - [github](notebooks/1.2_process_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/1.2_process_data.ipynb): data cleaning
+    - [github](notebooks/2.1_analyze_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/2.1_analyze_data.ipynb): modeling - code-switching detection and topic modeling
+    - [github](notebooks/2.2_analyze_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/2.2_analyze_data.ipynb): linguistic analysis - tokenization and tests
 - [images](#images/): directory for images generated in this project
 - [Chinese_English_CS_presentation.pptx](#Chinese_English_CS_presentation.pptx): the slide presentation of the project
 - [progress_report.md](#progress_Report.md): the detailed progress made through the project
