@@ -15,9 +15,9 @@
 
 ## Introduction
 
-The phenomenon of **code-switching**, where bilingual speakers alternate between languages within a conversation, is a common occurrence in multilingual environments (Tulloch et al., 2023). Code-switching serves as a means of bridging language gaps, providing more precise or culturally relevant expressions, or adapting to social dynamics. This report investigates **Chinese-English code-switching** in posts on a Chinese-language Stack Exchange site, aiming to quantify the frequency of such occurrences and to examine the impact of contextual factors, particularly the topics discussed, on the use of code-switching. This study contributes to the growing body of research on multilingual communication patterns in online communities, focusing on bilingual users who engage in technical discussions.
+The phenomenon of **code-switching**, where bilingual speakers alternate between languages within a conversation, is a common occurrence in multilingual environments (Tulloch et al., 2023). Code-switching serves as a means of bridging language gaps, providing  culturally relevant expressions, or adapting to social dynamics. This project investigates **Chinese-English code-switching** in posts on a Chinese-language Stack Exchange site, aiming to quantify the frequency of such occurrences and to examine the impact of contextual factors, particularly the topics, on the use of code-switching. This study contributes to the growing body of research on multilingual communication patterns in online communities.
 
-**Keywords:** Chinese-English bilinguals, code-switching, Stack Exchange, bilingual communication, online communities
+**Keywords:** Chinese-English, code-switching, Stack Exchange, multilingual communication, online communities
 
 ## Project History and Process
 
@@ -36,7 +36,7 @@ Data for this analysis was obtained using the Stack Exchange API, which allowed 
 1. **Data Collection:** A total of **12,400 posts** were retrieved from Stack Exchange using its API.
 2. **Data Cleaning:** Posts were cleaned by checking and removing URLs, converting HTML encoding to Chinese/English characters, and checking and removing non-Chinese/english characters.
 3. **Text Tokenization:** The text data was tokenized into individual words (along with their POS and NER) and sentences using the `stanza` library. 
-4. **Sample Data:** A sample of 1000 rows was extracted from the dataset to test the effectiveness of the preprocessing pipeline and ensure that the code-switching instances were accurately identified and labeled.
+4. **Sample Data:** A randomly selected sample of 1000 rows was extracted from the dataset to test the effectiveness of the preprocessing pipeline and ensure that the code-switching instances were accurately identified and labeled.
 
 The cleaned and tokenized dataset is now ready for more advanced analysis, including language detection, topic modeling, and part-of-speech (POS) shifting analysis.
 
@@ -44,9 +44,9 @@ The cleaned and tokenized dataset is now ready for more advanced analysis, inclu
 
 To analyze the occurrence of code-switching and its relationship with contextual factors, I employed a combination of **language detection**, **statistical modeling**, and **linguistic analysis**. The methodology included several key steps, as outlined below:
 
-1. **Language Detection:** Initially, language detection libraries such as `langdetect` and `langid` were employed to identify code-switching instances by detecting the language of individual sentences within posts. However, both libraries struggled with mixed-language sentences, particularly when both languages were used within a single sentence. Therefore, a **regular expression (regex)** approach was implemented to better detect and label code-switching, focusing on language alternation at the sentence and word levels.
+1. **Language Detection:** Initially, language detection libraries such as `langdetect` and `langid` were employed to identify code-switching instances by detecting the language of individual sentences within posts. However, both libraries struggled with short sentences which most of the text data in this dataset were. Therefore, a **regular expression (regex)** approach was implemented to better detect and label code-switching.
    
-2. **Topic Modeling:** Clustering techniques, such as **KMeans** and **Latent Dirichlet Allocation (LDA)**, were applied to identify the topics discussed in the posts. The former was used to identify the number of clusters/topics, and the latter was used to for identify the topics for each post. After assigning the topics to the posts, I used the WordCloud to plot the 30 words in each topic, inspected the standard deviations of the each topics' top words, and manually conducted a thematic analysis and put forward topic names. These techniques allowed for an exploration of whether code-switching frequencies varied by the type of topic.
+2. **Topic Modeling:** Clustering techniques, such as **KMeans** and **Latent Dirichlet Allocation (LDA)**, were applied to identify the topics discussed in the posts. The former was used to identify the number of clusters/topics, and the latter was used to for identify the topics for each post. After assigning the topics to the posts, I used the WordCloud to plot the 30 words in each topic, inspected the standard deviations of the each topics' top words, and manually conducted a thematic analysis and put forward topic names. These techniques allowed for an exploration of whether code-switching frequencies varied by topic.
 
 **Figure 1. WordCloud of top words in each topic**
 
@@ -94,7 +94,7 @@ The null hypothesis of the Kruskal-Wallis test is that the distributions of code
 The test results suggest that code-switching occurs consistently across the domains, indicating that it is a general feature of bilingual communication in this context, rather than being constrained to specific discourse types.
 
 ### Part-of-Speech Shifting
-The analysis of part-of-speech shifts revealed the following:
+The analysis of POS shifts revealed the following:
 
 | POS Shift             | Frequency Count |
 |-----------------------|-----------------|
@@ -104,9 +104,9 @@ The analysis of part-of-speech shifts revealed the following:
 **Figure 2. Number of POS (non-)shifting**  
 ![Figure cs count](./images/pos_shift_analysis.png)
 
-In the dataset, the majority of code-switching instances did not involve a shift in part-of-speech, suggesting that code-switching primarily occurs at the lexical level. The shifting examples, such as the translation of 陈子昂's name from a proper noun (**N**) to the verb (**V**) phrase "Need help to translate" or the use of "我" in Li Bai's poetry lines, highlight cases where a part-of-speech change occurs within the switch. For instance, "Usage of ""我"" in Li Bai's lines '东风随春归，发我枝上花'" moves from a preposition (**Prep**) to a pronoun (**Pro**) in the context of a specific literary usage.
+In the dataset, the majority of code-switching instances did not involve a shift in POS, suggesting that code-switching primarily occurs at the lexical level. The shifting examples, such as the translation of 陈子昂's name from a proper noun (**N**) to the verb (**V**) phrase "Need help to translate" or the use of "我" in Li Bai's poetry lines, highlight cases where a POS change occurs within the switch. For instance, "Usage of ""我"" in Li Bai's lines '东风随春归，发我枝上花'" moves from a preposition (**Prep**) to a pronoun (**Pro**) in the context of a specific literary usage.
 
-On the other hand, non-shifting examples such as the use of "老板" in video game contexts or "我" in Li Bai’s lines show instances where code-switching occurs without a change in part-of-speech. These examples are consistent with the idea that much of the observed code-switching involves lexical borrowing, where the switch between languages or registers does not necessarily entail a syntactic transformation. The shift or lack thereof in POS suggests that the lexical nature of code-switching is prominent in this dataset, with most instances maintaining syntactic coherence within the sentence structure despite switching between languages.
+On the other hand, non-shifting examples such as the use of "老板" in video game contexts or "我" in Li Bai’s lines show instances where code-switching occurs without a change in POS. These examples are consistent with the idea that much of the observed code-switching involves lexical borrowing, where the switch between languages or registers does not necessarily entail a syntactic transformation. The shift or lack thereof in POS suggests that the lexical nature of code-switching is prominent in this dataset, with most instances maintaining syntactic coherence within the sentence structure despite switching between languages.
 
 
 ## Discussion
