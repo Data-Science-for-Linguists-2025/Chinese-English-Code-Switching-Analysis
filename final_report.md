@@ -4,7 +4,7 @@
 **Date:** April 15, 2025
 
 ## Table of Contents
-1. [Introduction](#introduction)
+1. [Introduction and Overview](#introduction-and-overview)
 2. [Project History and Process](#project-history-and-process)
 3. [Data Collection and Preprocessing](#data-collection-and-preprocessing)
 4. [Analysis Methodology](#analysis-methodology)
@@ -13,7 +13,7 @@
 7. [Challenges and Setbacks](#challenges-and-setbacks)
 8. [Conclusion](#conclusion)
 
-## Introduction
+## Introduction and Overview
 
 The phenomenon of **code-switching**, where multilingual speakers alternate between languages within a conversation, is a common occurrence in multilingual environments (Tulloch et al., 2023). Code-switching serves as a means of bridging language gaps, providing  culturally relevant expressions, or adapting to social dynamics. This project investigates **Chinese-English code-switching** in posts on a Chinese-language Stack Exchange site, aiming to quantify the frequency of such occurrences and to examine the impact of contextual factors, particularly the topics, on the use of code-switching. This study contributes to the growing body of research on multilingual communication patterns in online communities.
 
@@ -25,18 +25,18 @@ The project originated from the need to better understand the linguistic dynamic
 
 ### Initial Setbacks and Adjustments
 The project encountered several initial challenges:
-- **Data Collection:** The Stack Exchange API’s rate-limiting restrictions delayed the retrieval of the large dataset required for analysis. Optimized request strategies, such as batching requests and using pagination, were implemented to minimize downtime and ensure comprehensive data gathering. In addition, initial experiments using web scraping on a different multilingual forum were attempted using `BeautifulSoup`, and other two datasets were gathered, although these datasets were not used. 
-- **Data Preprocessing:** The dataset required extensive cleaning, such as URLs,  HTML encoding to Chinese/English characters, and others. This process proved to be time-consuming and required multiple iterations of data cleaning to achieve a usable dataset.
+- **Data Collection:** The Stack Exchange API’s rate-limiting restrictions delayed the retrieval of the large dataset required for analysis. Optimized request strategies, such as batching requests and using pagination, were implemented to minimize downtime and ensure comprehensive data gathering. In addition, initial experiments using web scraping on a different multilingual forum were attempted using `BeautifulSoup`, and other two datasets were gathered, although these datasets were not used.  For specific code and process, see [0_collect_data](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/0_collect_data.ipynb) and [1.1_collect_data](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/1.1_collect_data.ipynb).
+- **Data Preprocessing:** The dataset required extensive cleaning, such as URLs,  HTML encoding to Chinese/English characters, and others. This process proved to be time-consuming and required multiple iterations of data cleaning to achieve a usable dataset. For specific code, see [1.2_process_data](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/1.2_process_data.ipynb).
 
 ## Data Collection and Preprocessing
 
-Data for this analysis was obtained using the Stack Exchange API, which allowed for the extraction of posts from a Chinese-language focused forum. The dataset consists of both **questions** and **tags** where multilingual users alternated between Chinese and English. Due to the nature of code-switching in multilingual discourse, the dataset was especially challenging to process due to the frequent mixing of languages in single posts.
+Data for this analysis was obtained using the Stack Exchange API, which allowed for the extraction of posts from a Chinese-language focused forum. The dataset consists of both **questions** and **tags** where multilingual users alternated between Chinese and English. Due to the nature of code-switching in multilingual discourse, the dataset was especially challenging to process due to the frequent mixing of languages in single posts. For specific code, see [1.1_collect_data](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/1.1_collect_data.ipynb).
 
 ### Key Steps in Data Preprocessing:
 1. **Data Collection:** A total of **12,400 posts** were retrieved from Stack Exchange using its API.
 2. **Data Cleaning:** Posts were cleaned by checking and removing URLs, converting HTML encoding to Chinese/English characters, and checking and removing non-Chinese/english characters.
 3. **Text Tokenization:** The text data was tokenized into individual words (along with their POS and NER) and sentences using the `stanza` library. 
-4. **Sample Data:** A randomly selected sample of 1000 rows was extracted from the dataset to test the effectiveness of the preprocessing pipeline and ensure that the code-switching instances were accurately identified and labeled.
+4. **Sample Data:** A randomly selected sample of 1000 rows was extracted from the dataset to test the effectiveness of the preprocessing pipeline and ensure that the code-switching instances were accurately identified and labeled. For specifics, see [1.2_process_data](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/1.2_process_data.ipynb).
 
 The cleaned and tokenized dataset is now ready for more advanced analysis, including language detection, topic modeling, and part-of-speech (POS) shifting analysis.
 
@@ -44,18 +44,18 @@ The cleaned and tokenized dataset is now ready for more advanced analysis, inclu
 
 To analyze the occurrence of code-switching and its relationship with contextual factors, I employed a combination of **language detection**, **statistical modeling**, and **linguistic analysis**. The methodology included several key steps, as outlined below:
 
-1. **Language Detection:** Initially, language detection libraries such as `langdetect` and `langid` were employed to identify code-switching instances by detecting the language of individual sentences within posts. However, both libraries struggled with short sentences which most of the text data in this dataset were. Therefore, a **regular expression (regex)** approach was implemented to better detect and label code-switching.
+1. **Language Detection:** Initially, language detection libraries such as `langdetect` and `langid` were employed to identify code-switching instances by detecting the language of individual sentences within posts. However, both libraries struggled with short sentences which most of the text data in this dataset were. Therefore, a **regular expression (regex)** approach was implemented to better detect and label code-switching. For specifics, see [2.1_analyze_data.ipynb](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/2.1_analyze_data.ipynb).
    
-2. **Topic Modeling:** Clustering techniques, such as **KMeans** and **Latent Dirichlet Allocation (LDA)**, were applied to identify the topics discussed in the posts. The former was used to identify the number of clusters/topics, and the latter was used to for identify the topics for each post. After assigning the topics to the posts, I used the WordCloud to plot the 30 words in each topic, inspected the standard deviations of the each topics' top words, and manually conducted a thematic analysis and put forward topic names. These techniques allowed for an exploration of whether code-switching frequencies varied by topic.
+2. **Topic Modeling:** Clustering techniques, such as **KMeans** and **Latent Dirichlet Allocation (LDA)**, were applied to identify the topics discussed in the posts. The former was used to identify the number of clusters/topics, and the latter was used to for identify the topics for each post. After assigning the topics to the posts, I used the WordCloud to plot the 30 words in each topic, inspected the standard deviations of the each topics' top words, and manually conducted a thematic analysis and put forward topic names. These techniques allowed for an exploration of whether code-switching frequencies varied by topic. For specifics, see [2.1_analyze_data.ipynb](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/2.1_analyze_data.ipynb).
 
 **Figure 1. WordCloud of top words in each topic**
 
 ![Figure wordcluds](./images/wordclouds.png)
 
 
-3. **Frequency Analysis:** A detailed **frequency count** of code-switching instances across various domains was conducted. The focus was to understand if code-switching occurs more frequently in different topics. The aim was to observe whether topic (situational code-switching) influenced the occurrence of code-switching.
+3. **Frequency Analysis:** A detailed **frequency count** of code-switching instances across various domains was conducted. The focus was to understand if code-switching occurs more frequently in different topics. The aim was to observe whether topic (situational code-switching) influenced the occurrence of code-switching. For specifics, see [2.1_analyze_data.ipynb](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/2.1_analyze_data.ipynb).
 
-4. **Part-of-Speech Shifting:** Using **POS tagging** performed by the `stanza` library, the analysis aimed to identify whether code-switching was associated with shifts in word classes (e.g., noun to verb). This allowed for an investigation of whether code-switching involved simple lexical alternation or more complex syntactic changes.
+4. **Part-of-Speech Shifting:** Using **POS tagging** performed by the `stanza` library, the analysis aimed to identify whether code-switching was associated with shifts in word classes (e.g., noun to verb). This allowed for an investigation of whether code-switching involved simple lexical alternation or more complex syntactic changes. For specifics, see [2.2_analyze_data.ipynb](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/2.2_analyze_data.ipynb).
 
 These methodologies provided a comprehensive approach to examining how code-switching is manifested in various contexts, helping to understand the linguistic and social factors that drive this phenomenon.
 
@@ -133,9 +133,11 @@ The findings highlight the importance of computational methods, such as language
 ---
 
 For further details on the code and analysis, see the following Jupyter Notebooks:
-- [1.1_collect_data.ipynb](#notebooks/1.1_collect_data.ipynb)
-- [2.1_analyze_data.ipynb](#notebooks/2.1_analyze_data.ipynb)
-- [2.2_analyze_data.ipynb](#notebooks/2.2_analyze_data.ipynb)
+- 0_collect_data.ipynb [github](notebooks/0_collect_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/0_collect_data.ipynb)
+- 1.1_collect_data.ipynb [github](notebooks/1.1_collect_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/1.1_collect_data.ipynb)
+- 1.2_process_data.ipynb [github](notebooks/1.2_process_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/1.2_process_data.ipynb)
+- 2.1_analyze_data.ipynb [github](notebooks/2.1_analyze_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/2.1_analyze_data.ipynb)
+- 2.2_analyze_data.ipynb [github](notebooks/2.2_analyze_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/2.2_analyze_data.ipynb)
 
 ## References and Additional Readings
 - Bassiouney, R. (2020). *Arabic sociolinguistics: Topics in diglossia, gender, identity, and politics*. Georgetown University Press.
