@@ -6,13 +6,13 @@
 
 ## Summary
 
-This project analyzes Chinese-English code-switching in posts from a Chinese-language Stack Exchange site. The aim is to detect instances of code-switching, measure its frequency, and explore how different domains influence the occurrence of code-switching in this bilingual online community. The findings provide insights into multilingual communication patterns, particularly among bilingual users in online communities.
+This project analyzes Chinese-English code-switching in posts from a Chinese-language Stack Exchange site. The aim is to detect instances of code-switching, measure its frequency, and explore how different domains influence the occurrence of code-switching in this multilingual online community. The findings provide insights into multilingual communication patterns, particularly among multilingual users in online communities.
 
 **Keywords:** Chinese-English , code-switching, Stack Exchange, multilingual communication, online communities
 
 ## Data
 
-The data for this project is collected using the **Stack Exchange API**, specifically querying posts from a Chinese-language focused Stack Exchange site. This dataset includes question posts from users who engage in bilingual Chinese-English discourse, providing a real-world view of code-switching in online forums. 1,000 randomly selected records of the data sourced from the API were provided in this [stack_exchange_cleaned_sample.csv](data/stack_exchange_cleaned_sample.csv) in the data directory. 
+The data for this project is collected using the **Stack Exchange API**, specifically querying posts from a Chinese-language focused Stack Exchange site. This dataset includes question posts from users who engage in multilingual Chinese-English discourse, providing a real-world view of code-switching in online forums. 1,000 randomly selected records of the data sourced from the API were provided in this [stack_exchange_cleaned_sample.csv](data/stack_exchange_cleaned_sample.csv) in the data directory. 
 
 - **Link:** [Stack Exchange API](https://api.stackexchange.com/)
 - **Attribution:** Stack Exchange
