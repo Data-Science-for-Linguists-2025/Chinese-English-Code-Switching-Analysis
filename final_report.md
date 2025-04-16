@@ -15,22 +15,22 @@
 
 ## Introduction
 
-The phenomenon of **code-switching**, where bilingual speakers alternate between languages within a conversation, is a common occurrence in multilingual environments (Tulloch et al., 2023). Code-switching serves as a means of bridging language gaps, providing  culturally relevant expressions, or adapting to social dynamics. This project investigates **Chinese-English code-switching** in posts on a Chinese-language Stack Exchange site, aiming to quantify the frequency of such occurrences and to examine the impact of contextual factors, particularly the topics, on the use of code-switching. This study contributes to the growing body of research on multilingual communication patterns in online communities.
+The phenomenon of **code-switching**, where multilingual speakers alternate between languages within a conversation, is a common occurrence in multilingual environments (Tulloch et al., 2023). Code-switching serves as a means of bridging language gaps, providing  culturally relevant expressions, or adapting to social dynamics. This project investigates **Chinese-English code-switching** in posts on a Chinese-language Stack Exchange site, aiming to quantify the frequency of such occurrences and to examine the impact of contextual factors, particularly the topics, on the use of code-switching. This study contributes to the growing body of research on multilingual communication patterns in online communities.
 
 **Keywords:** Chinese-English, code-switching, Stack Exchange, multilingual communication, online communities
 
 ## Project History and Process
 
-The project originated from the need to better understand the linguistic dynamics of bilingual online communities. The main objective was to examine Chinese-English code-switching and determine how context/topics affects the frequency and patterns of code-switching.
+The project originated from the need to better understand the linguistic dynamics of multilingual online communities. The main objective was to examine Chinese-English code-switching and determine how context/topics affects the frequency and patterns of code-switching.
 
 ### Initial Setbacks and Adjustments
 The project encountered several initial challenges:
-- **Data Collection:** The Stack Exchange API’s rate-limiting restrictions delayed the retrieval of the large dataset required for analysis. Optimized request strategies, such as batching requests and using pagination, were implemented to minimize downtime and ensure comprehensive data gathering. In addition, initial experiments using web scraping on a different bilingual forum were attempted using `BeautifulSoup`, and other two datasets were gathered, although these datasets were not used. 
+- **Data Collection:** The Stack Exchange API’s rate-limiting restrictions delayed the retrieval of the large dataset required for analysis. Optimized request strategies, such as batching requests and using pagination, were implemented to minimize downtime and ensure comprehensive data gathering. In addition, initial experiments using web scraping on a different multilingual forum were attempted using `BeautifulSoup`, and other two datasets were gathered, although these datasets were not used. 
 - **Data Preprocessing:** The dataset required extensive cleaning, such as URLs,  HTML encoding to Chinese/English characters, and others. This process proved to be time-consuming and required multiple iterations of data cleaning to achieve a usable dataset.
 
 ## Data Collection and Preprocessing
 
-Data for this analysis was obtained using the Stack Exchange API, which allowed for the extraction of posts from a Chinese-language focused forum. The dataset consists of both **questions** and **tags** where bilingual users alternated between Chinese and English. Due to the nature of code-switching in bilingual discourse, the dataset was especially challenging to process due to the frequent mixing of languages in single posts.
+Data for this analysis was obtained using the Stack Exchange API, which allowed for the extraction of posts from a Chinese-language focused forum. The dataset consists of both **questions** and **tags** where multilingual users alternated between Chinese and English. Due to the nature of code-switching in multilingual discourse, the dataset was especially challenging to process due to the frequent mixing of languages in single posts.
 
 ### Key Steps in Data Preprocessing:
 1. **Data Collection:** A total of **12,400 posts** were retrieved from Stack Exchange using its API.
@@ -91,7 +91,7 @@ A **Kruskal-Wallis H test** was employed to assess whether code-switching freque
 
 The null hypothesis of the Kruskal-Wallis test is that the distributions of code-switching frequencies across the domains are identical, while the alternative hypothesis suggests that at least one domain differs significantly from the others. The **p-value** for the test was **0.415**, which is above the significance threshold of 0.05, indicating that the differences in code-switching frequencies across domains are not statistically significant.
 
-The test results suggest that code-switching occurs consistently across the domains, indicating that it is a general feature of bilingual communication in this context, rather than being constrained to specific discourse types.
+The test results suggest that code-switching occurs consistently across the domains, indicating that it is a general feature of multilingual communication in this context, rather than being constrained to specific discourse types.
 
 ### Part-of-Speech Shifting
 The analysis of POS shifts revealed the following:
@@ -111,9 +111,9 @@ On the other hand, non-shifting examples such as the use of "老板" in video ga
 
 ## Discussion
 
-The results of the analysis suggest that **code-switching** is a common and frequent feature of bilingual communication on Stack Exchange. Despite analyzing various domains/topics, no significant difference in code-switching frequency was found, implying that the act of switching between Chinese and English is a regular feature of bilingual communication in this online community, regardless of the topic discussed. This finding disagrees with **situational code-switching**, where external factors such as setting and social dynamics influence language choice (Bassiouney, 2020), is prevalent in online discourse, regardless of the specific subject matter.
+The results of the analysis suggest that **code-switching** is a common and frequent feature of multilingual communication on Stack Exchange. Despite analyzing various domains/topics, no significant difference in code-switching frequency was found, implying that the act of switching between Chinese and English is a regular feature of multilingual communication in this online community, regardless of the topic discussed. This finding disagrees with **situational code-switching**, where external factors such as setting and social dynamics influence language choice (Bassiouney, 2020), is prevalent in online discourse, regardless of the specific subject matter.
 
-The **POS shifting** analysis also suggests that while code-switching is often lexical, there are instances in which a shift in word class occurs, further indicating the complexity of code-switching behavior in bilingual contexts.
+The **POS shifting** analysis also suggests that while code-switching is often lexical, there are instances in which a shift in word class occurs, further indicating the complexity of code-switching behavior in multilingual contexts.
 
 ## Challenges and Setbacks
 
@@ -122,13 +122,13 @@ Several challenges were encountered during the execution of the project:
 - **Data Preprocessing:** Due to inconsistent formatting, significant time was required to clean and preprocess the dataset. Multiple rounds of data cleaning were necessary.
 - **Language Detection Errors:** The language detection tools used initially (langdetect and langid) were unable to accurately classify mixed-language sentences. A **regular expression-based approach** was implemented to improve detection accuracy.
 
-Despite these setbacks, the project was completed successfully, and the analysis provides valuable insights into bilingual communication in online spaces.
+Despite these setbacks, the project was completed successfully, and the analysis provides valuable insights into multilingual communication in online spaces.
 
 ## Conclusion
 
-This study sheds light on the phenomenon of **Chinese-English code-switching** in posts on Stack Exchange. The results indicate that code-switching is a frequent and consistent feature of bilingual communication, unaffected by the domain of discourse. Additionally, while most code-switching instances are lexical, with the marjority involving shifts in POS, suggesting a complex interplay of factors influencing code-switching behavior.
+This study sheds light on the phenomenon of **Chinese-English code-switching** in posts on Stack Exchange. The results indicate that code-switching is a frequent and consistent feature of multilingual communication, unaffected by the domain of discourse. Additionally, while most code-switching instances are lexical, with the marjority involving shifts in POS, suggesting a complex interplay of factors influencing code-switching behavior.
 
-The findings highlight the importance of computational methods, such as language detection, topic modeling, and POS tagging, in studying bilingual discourse. Future research can build on this research by expanding the dataset, exploring more domains, and investigating the cognitive and social implications of code-switching in online communities.
+The findings highlight the importance of computational methods, such as language detection, topic modeling, and POS tagging, in studying multilingual discourse. Future research can build on this research by expanding the dataset, exploring more domains, and investigating the cognitive and social implications of code-switching in online communities.
 
 ---
 
