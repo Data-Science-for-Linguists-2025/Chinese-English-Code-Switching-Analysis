@@ -20,7 +20,7 @@ The data for this project is collected using the **Stack Exchange API**, specifi
 ## Directory
 
 - **[final_report.md](#final_report.md)**: the comprehensive report of the project 
-- [notebooks](notebooks/): The process and outcome of the project
+- [notebooks](notebooks/): the process and outcome of the project
     - 0_collect_data.ipynb [github](notebooks/0_collect_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/0_collect_data.ipynb): experiment for scraping data from a website (This is not used in the project.)
     - 1.1_collect_data.ipynb [github](notebooks/1.1_collect_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/1.1_collect_data.ipynb): data collection from using the API
     - 1.2_process_data.ipynb [github](notebooks/1.2_process_data.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/1.2_process_data.ipynb): data cleaning
@@ -34,8 +34,5 @@ The data for this project is collected using the **Stack Exchange API**, specifi
 - [progress_report.md](progress_report.md): the detailed progress made through the project
 - [project_plan.md](project_plan.md): the original plan developed at the beginning of the project
 
-## References
-- Bassiouney, R. (2020). Arabic sociolinguistics: Topics in diglossia, gender, identity, and politics. Georgetown University Press.
-- Montanari S, Ochoa W, & Subrahmanyam K. (2019). A longitudinal investigation of language mixing in Spanish–English dual language learners: The role of language proficiency, variability, and sociolinguistic factors. Journal of Child Language, 1, 1–25. 10.1017/S0305000919000278
-- Quick, A. E., Lieven, E., Carpenter, M., & Tomasello, M. (2018). Identifying partially schematic units in the code-mixing of an English and German speaking child. Linguistic Approaches to Bilingualism, 8(4), 477–501. https://doi.org/10.1075/lab.15049.qui
-- Tulloch, M. K., & Hoff, E. (2023). Filling lexical gaps and more: Code-switching for the power of expression by young bilinguals. Journal of Child Language, 50(4), 981–1004. https://doi.org/10.1017/S0305000922000307
+## Guestbook
+Feel free to leave any comments, feedback, and suggestions on this [guestbook](https://github.com/Data-Science-for-Linguists-2025/Class-Lounge/blob/main/guestbooks/qidu.md).
