@@ -98,10 +98,10 @@ The analysis of POS shifts revealed the following:
 
 | POS Shift             | Frequency Count |
 |-----------------------|-----------------|
-| **No Shift**          | 139,302         |
-| **Shift**             | 13,271          |
+| **No Shift**          | 129,014         |
+| **Shift**             | 23,559          |
 
-**Figure 2. Number of POS (non-)shifting**  
+**Figure 2. Number of POS (non-)shifting in CS words**  
 ![Figure cs count](./images/pos_shift_analysis.png)
 
 In the dataset, the majority of code-switching instances did not involve a shift in POS, suggesting that code-switching primarily occurs at the lexical level. The shifting examples, such as the translation of 陈子昂's name from a proper noun (**N**) to the verb (**V**) phrase "Need help to translate" or the use of "我" in Li Bai's poetry lines, highlight cases where a POS change occurs within the switch. For instance, "Usage of ""我"" in Li Bai's lines '东风随春归，发我枝上花'" moves from a preposition (**Prep**) to a pronoun (**Pro**) in the context of a specific literary usage.
