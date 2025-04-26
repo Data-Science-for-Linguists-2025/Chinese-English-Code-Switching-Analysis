@@ -1,7 +1,7 @@
 # Chinese-English Code-Switching Analysis
 
 **Author:** Qidu Fu  
-**Date:** April 15, 2025
+**Date:** April 26, 2025
 
 ## Table of Contents
 1. [Introduction and Overview](#introduction-and-overview)
@@ -33,7 +33,7 @@ The project encountered several initial challenges:
 Data for this analysis was obtained using the Stack Exchange API, which allowed for the extraction of posts from a Chinese-language focused forum. The dataset consists of both **questions** and **tags** where multilingual users alternated between Chinese and English. Due to the nature of code-switching in multilingual discourse, the dataset was especially challenging to process due to the frequent mixing of languages in single posts. For specific code, see [1.1_collect_data](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/ff9caf7466e974b2a63627bd47a40c5941afd29a/notebooks/1.1_collect_data.ipynb).
 
 ### Key Steps in Data Preprocessing:
-1. **Data Collection:** A total of **12,400 posts** were retrieved from Stack Exchange using its API.
+1. **Data Collection:** A total of **12,401 posts** were retrieved from Stack Exchange using its API.
 2. **Data Cleaning:** Posts were cleaned by checking and removing URLs, converting HTML encoding to Chinese/English characters, and checking and removing non-Chinese/english characters.
 3. **Text Tokenization:** The text data was tokenized into individual words (along with their POS and NER) and sentences using the `stanza` library. 
 4. **Sample Data:** A randomly selected sample of 1000 rows was extracted from the dataset to test the effectiveness of the preprocessing pipeline and ensure that the code-switching instances were accurately identified and labeled. For specifics, see [1.2_process_data](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/ff9caf7466e974b2a63627bd47a40c5941afd29a/notebooks/1.2_process_data.ipynb).
@@ -55,9 +55,9 @@ To analyze the occurrence of code-switching and its relationship with contextual
 
 3. **Frequency Analysis:** A detailed **frequency count** of code-switching instances across various domains was conducted. The focus was to understand if code-switching occurs more frequently in different topics. The aim was to observe whether topic (situational code-switching) influenced the occurrence of code-switching. For specifics, see [2.1_analyze_data.ipynb](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/2.1_analyze_data.ipynb).
 
-4. **Part-of-Speech Shifting:** Using **POS tagging** performed by the `stanza` library, the analysis aimed to identify whether code-switching was associated with shifts in word classes (e.g., noun to verb). This allowed for an investigation of whether code-switching involved simple lexical alternation or more complex syntactic changes. For specifics, see [2.2_analyze_data.ipynb](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/2.2_analyze_data.ipynb).
+4. **Part-of-Speech Shifting:** Using **POS tagging** performed by the `stanza` library, the analysis aimed to identify whether code-switching was associated with shifts in word classes (e.g., noun to verb) between the prior word and the CS word. For specifics, see [2.2_analyze_data.ipynb](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Chinese-English-Code-Switching-Analysis/blob/main/notebooks/2.2_analyze_data.ipynb).
 
-These methodologies provided a comprehensive approach to examining how code-switching is manifested in various contexts, helping to understand the linguistic and social factors that drive this phenomenon.
+These methodologies provided a comprehensive approach to examining how code-switching is manifested in various contexts.
 
 ## Results
 
@@ -94,14 +94,14 @@ The null hypothesis of the Kruskal-Wallis test is that the distributions of code
 The test results suggest that code-switching occurs consistently across the domains, indicating that it is a general feature of multilingual communication in this context, rather than being constrained to specific discourse types.
 
 ### Part-of-Speech Shifting
-The analysis of POS shifts revealed the following:
+The analysis of POS shifts (between the prior word and the CS word) revealed the following:
 
 | POS Shift             | Frequency Count |
 |-----------------------|-----------------|
 | **No Shift**          | 129,014         |
 | **Shift**             | 23,559          |
 
-**Figure 2. Number of POS (non-)shifting in CS words**  
+**Figure 3. Number of POS (non-)shifting in CS words**  
 ![Figure cs count](./images/pos_shift_analysis.png)
 
 In the dataset, the majority of code-switching instances did not involve a shift in POS, suggesting that code-switching primarily occurs at the lexical level. The shifting examples, such as the translation of 陈子昂's name from a proper noun (**N**) to the verb (**V**) phrase "Need help to translate" or the use of "我" in Li Bai's poetry lines, highlight cases where a POS change occurs within the switch. For instance, "Usage of ""我"" in Li Bai's lines '东风随春归，发我枝上花'" moves from a preposition (**Prep**) to a pronoun (**Pro**) in the context of a specific literary usage.
